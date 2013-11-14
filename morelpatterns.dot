@@ -111,6 +111,7 @@ digraph morelpatterns {
   location -> latlon [name=location]
   dates [function=with,expr="quote(getdates(code))"]
   collection_data -> dates [name=data]
+  mkdir [expression="dir.create('data/QCLCD')"]
 //  QCLCD_filenames [function=with,expr="quote(unique(paste0('QCLCD',year,month,'.zip')))"]
 //  dates -> QCLCD_filenames [name=data]
   nearest_station_Tavg [function="nearest_station_msmts",field="'Tavg'"]
