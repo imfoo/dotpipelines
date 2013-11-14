@@ -31,7 +31,7 @@
 #  angles = acos(cos(pi/180*(stations_lat-lat))*cos(pi/180*(stations_lon-lon)))
 #  order(angles)
 #}
-#nearest_station_msmts <- function(dates, latlon, field, datadir="/home/cld/projects/data/QCLCD") {
+#nearest_station_msmts <- function(dates, latlon, field, datadir="data/QCLCD") {
 #  if(nrow(dates)!=nrow(latlon)) stop("number of rows in dates data does not match number of rows in location data")
 #  out <- data.frame(msmt=rep(NA,nrow(dates)))
 #  colnames(out) = field
@@ -73,7 +73,7 @@
 #  }
 #  return(out)
 #}
-#nearest_soil_msmts <- function(dates,latlon,field,datadir="/home/cld/projects/data/soilsip01") { # data from ftp://ftp.ncdc.noaa.gov/pub/data/uscrn/products/soilsip01
+#nearest_soil_msmts <- function(dates,latlon,field,datadir="data/soilsip01") { # data from ftp://ftp.ncdc.noaa.gov/pub/data/uscrn/products/soilsip01
 #  files = list.files(datadir,pattern="CRNSIP01_.*.txt$")
 #  WBAN = sapply(files,function(file) {strsplit(readLines(file.path(datadir,file),n=1),split=" +")[[1]][2]})
 #  lat = sapply(files,function(file) {strsplit(readLines(file.path(datadir,file),n=1),split=" +")[[1]][4]})
