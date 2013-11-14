@@ -105,11 +105,11 @@
 
 digraph morelpatterns {
   collection_data [function="read.delim",sep="'\t'",file="'data/morel_collections.txt'", "row.names"=NULL, skip=1,"as.is"=TRUE]
-  location [function="with",expr="quote(location)"]
+  location [function="with",expr="location"]
   collection_data -> location [name=data]
   latlon [function="geocode"]
   location -> latlon [name=location]
-  dates [function=with,expr="quote(getdates(code))"]
+  dates [function=with,expr="getdates(code)"]
   collection_data -> dates [name=data]
 //  QCLCD_filenames [function=with,expr="quote(unique(paste0('QCLCD',year,month,'.zip')))"]
 //  dates -> QCLCD_filenames [name=data]
