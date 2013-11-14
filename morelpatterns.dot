@@ -104,7 +104,7 @@
 #}
 
 digraph morelpatterns {
-  collection_data [function="read.delim",sep="'\t'",file="'/home/cld/projects/data/morel_collections.txt'", "row.names"=NULL, skip=1,"as.is"=TRUE]
+  collection_data [function="read.delim",sep="'\t'",file="'data/morel_collections.txt'", "row.names"=NULL, skip=1,"as.is"=TRUE]
   location [function="with",expr="quote(location)"]
   collection_data -> location [name=data]
   latlon [function="geocode"]
